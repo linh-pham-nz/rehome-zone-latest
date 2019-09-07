@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { getFruits } from '../apiClient'
+
 
 import Nav from './Nav'
 import SideBar from './SideBar'
