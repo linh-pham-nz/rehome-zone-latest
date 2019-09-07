@@ -1,10 +1,21 @@
 import React from 'react'
 
+import { getDbCats } from '../apiClient'
+
 class Adopt extends React.Component {
     constructor(props) {
         super(props)
     }
 
+    // displayCats() {
+    //     getDbCats().then(result => {
+    //         const data = result.body;
+    //         console.log("sideBar", data)
+    //         this.setState({
+    //             cats: data
+    //         })
+    //     })
+    // }
 
     render() {
         return (

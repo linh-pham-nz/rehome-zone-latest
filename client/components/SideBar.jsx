@@ -13,13 +13,14 @@ class SideBar extends React.Component {
 
     displayCats() {
         getDbCats().then(result => {
-            console.log(result)
-            // const data = result.body;
+            const data = result.body;
+            console.log("sideBar", data)
             // this.setState({
             //     cats: data
             // })
         })
-    }       
+    }
+       
     
     render() {
         return (
