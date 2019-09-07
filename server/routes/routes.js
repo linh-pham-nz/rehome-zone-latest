@@ -4,11 +4,10 @@ const db = require('../db')
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
-  db.getFruits()
-    .then(fruits => {
-      res.json({fruits})
-    })
+router.get('/api/v1/cats', (req, res) => {
+  db.getCats().then (results => {
+    res.json(results)
+  })
 })
 
 module.exports = router
