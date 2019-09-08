@@ -14,7 +14,6 @@ class Adopt extends React.Component {
         // displayCats() {
             getDbCats().then(result => {
                 const dbCats = result.body;
-                console.log("sideBar", dbCats)
                 this.setState({
                     cats: dbCats
                 })
@@ -25,14 +24,14 @@ class Adopt extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div>
+                <div className="container">
                     {this.state.cats.map((cat, i) => {
                         return (
                             <div key={i}>
                                 <div className="row">
                                     <div className="col-xl-4 col-sm-6"> 
                                         <div className="card card-dimensions zoom mb-4 shadow">
-                                            <img className="card-img-top card-img-top-dimensions" src="/images/cats/Andy.jpg"></img>
+                                            <img className="card-img-top card-img-top-dimensions" src={`/images/cats/${cat.name}.jpg`}></img>
                                             <div className="card-body">
                                                 <p>{cat.name}</p>
                                                 <p>{cat.breed}</p>
