@@ -20,13 +20,14 @@ class Rehome extends Component {
 
     handleChange = (e) => {
         const { name, value } = e.target
-        console.log(name, value)
+        console.log("event", name, value)
         this.setState({ 
-                name: value,
-                breed: value,
-                age: value
-            }
+            catName: value,
+            catBreed: value,
+            catAge: value
+        }
         )
+        console.log(this.state)
     }
 
     handleSubmit = (e) => {
@@ -36,17 +37,10 @@ class Rehome extends Component {
             catBreed: this.state.catBreed,
             catAge: this.state.catAge
         }
+        console.log(data)
     }
 
-    // postNewCat(data) {
-    //     then(() => {
-    //     this.setState({ 
-    //         catName: value,
-    //         catBreed: value,
-    //         catAge: undefined 
-    //         })
-    //     })
-    // }
+
 
     render() {
         console.log(this.state)
@@ -105,6 +99,14 @@ export default Rehome
 //     age: value
 // }
 
-// catName: value,
-// catBreed: value,
-// catAge: value
+// postNewCat(data) {
+//     then(() => {
+//     this.setState({ 
+//         catName: value,
+//         catBreed: value,
+//         catAge: 0 
+//         })
+//     })
+// }
+
+
