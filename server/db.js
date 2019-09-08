@@ -3,10 +3,19 @@ const config = require('../knexfile')[env]
 const db = require('knex')(config)
 
 module.exports = {
-  getCats
+  getCats,
+  postCatData
 }
 
 function getCats() {
   return db('cats').select()
 }
  
+function postCatData(data) {
+  return db('cats')
+    .insert({
+      name: data.catName, 
+      breed: data.catBreed,
+      age: data.catAge
+    })
+}

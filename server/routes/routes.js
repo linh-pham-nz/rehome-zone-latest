@@ -10,4 +10,10 @@ router.get('/api/v1/cats', (req, res) => {
   })
 })
 
+router.post('/PostNewCat', (req, res) => {
+  db.postCatData(req.body)
+  .then(() => {
+    res.status(201).send('')
+  })
+})
 module.exports = router
