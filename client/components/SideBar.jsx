@@ -16,7 +16,7 @@ class SideBar extends React.Component {
                 <div className="container-fluid sideBar-container">
                     <nav className="navbar navbar-expand-lg navbar-light">
                         <div className="container">
-                            <h3><Link to='/adopt' onClick={this.displayCats}>Adopt a cat</Link></h3>
+                            <h3><Link to='/adopt'>Adopt a cat</Link></h3>
                             <h3><Link to='/rehome'>Rehome a cat</Link></h3>
                         </div>
                     </nav>
