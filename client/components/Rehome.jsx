@@ -84,22 +84,5 @@ class Rehome extends Component {
 
 export default Rehome
 
-// From handleChange:
-
-// this.setState({ 
-//     name: value,
-//     breed: value,
-//     age: value
-// }
-
-// postNewCat(data) {
-//     then(() => {
-//     this.setState({ 
-//         catName: value,
-//         catBreed: value,
-//         catAge: 0 
-//         })
-//     })
-// }
 
 
