@@ -8,9 +8,9 @@ class Rehome extends Component {
         super(props)
     
         this.state = {
-            catName: '',
-            catBreed: '',
-            catAge: 0
+            name: '',
+            breed: '',
+            age: 0
         }
         
         // this.handleChange = this.handleChange.bind(this);
@@ -19,31 +19,24 @@ class Rehome extends Component {
 
 
     handleChange = (e) => {
-        const { name, value } = e.target
-        console.log("event", name, value)
+        // console.log("event", name, value)
         this.setState({ 
-            catName: value,
-            catBreed: value,
-            catAge: value
-        }
-        )
-        console.log(this.state)
+            [event.target.name]: event.target.value
+        })
     }
 
     handleSubmit = (e) => {
         e.preventDefault()
         const data = {
-            catName: this.state.catName,
-            catBreed: this.state.catBreed,
-            catAge: this.state.catAge
+            name: this.state.name,
+            breed: this.state.breed,
+            age: this.state.age
         }
-        console.log(data)
+        // console.log(data)
     }
 
-
-
     render() {
-        console.log(this.state)
+        // console.log(this.state)
         return (
             <React.Fragment>
                 <div className="container">
@@ -55,7 +48,7 @@ class Rehome extends Component {
                                     <input 
                                         type="text" 
                                         name="name" 
-                                        value={this.state.catName}
+                                        value={this.state.name}
                                         onChange={this.handleChange}
                                         />
                                 </label>
@@ -65,7 +58,7 @@ class Rehome extends Component {
                                 <input 
                                     type="text" 
                                     name="breed" 
-                                    value={this.state.catBreed}
+                                    value={this.state.breed}
                                     onChange={this.handleChange}
                                     />
                                 </label>
@@ -75,7 +68,7 @@ class Rehome extends Component {
                                 <input 
                                     type="number" 
                                     name="age" 
-                                    value={this.state.catAge}
+                                    value={this.state.age}
                                     onChange={this.handleChange}
                                     />
                                 </label>
@@ -91,22 +84,5 @@ class Rehome extends Component {
 
 export default Rehome
 
-// From handleChange:
-
-// this.setState({ 
-//     name: value,
-//     breed: value,
-//     age: value
-// }
-
-// postNewCat(data) {
-//     then(() => {
-//     this.setState({ 
-//         catName: value,
-//         catBreed: value,
-//         catAge: 0 
-//         })
-//     })
-// }
 
 
