@@ -11,7 +11,7 @@ const Nav = () => {
             <div className="navBar container-fluid">
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
                     <div className="container">
-                        <h1>Rehome Zone</h1>
+                        <h1><Link to='/'>Rehome Zone</Link></h1>
                         <h3><Link to='/adopt'>Adopt a cat</Link></h3>
                         <h3><Link to='/rehome'>Rehome a cat</Link></h3>
                     </div>
