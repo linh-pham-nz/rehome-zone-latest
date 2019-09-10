@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
 
 import RehomeZone from './RehomeZone'
 import Adopt from './Adopt'
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Router>
       <div className="navBar container-fluid">
-        <nav className="navbar navbar-expand-lg navbar-light bg-dark navbar-fixed-top">
+        <nav className="navbar bg-dark navbar-fixed-top">
           <div className="container">
             <h1><Link to='/'>Rehome Zone</Link></h1>
             <h3><Link to='/adopt'>Adopt a cat</Link></h3>
@@ -18,8 +18,8 @@ const App = () => {
           </div>
         </nav>
       </div>
-      <Rehome />
-      <Route path='/' component={RehomeZone} />
+      
+      <Route exact={true} path='/' component={RehomeZone} />
       <Route path="/Adopt" component={Adopt} />
       <Route path="/Rehome" component={Rehome} />
     </Router>

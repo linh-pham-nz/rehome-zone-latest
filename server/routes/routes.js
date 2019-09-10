@@ -11,7 +11,7 @@ router.get('/api/v1/cats', (req, res) => {
 })
 
 router.post('/PostNewCat', (req, res) => {
-  console.log("routes", data)
+  // console.log("routes", req.body)
   db.postCatData(req.body)
   .then(() => {
     res.status(201).send('')
