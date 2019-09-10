@@ -18,7 +18,7 @@ const App = () => {
           </div>
         </nav>
       </div>
-
+      <Rehome />
       <Route path='/' component={RehomeZone} />
       <Route path="/Adopt" component={Adopt} />
       <Route path="/Rehome" component={Rehome} />
