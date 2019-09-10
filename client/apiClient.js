@@ -5,6 +5,7 @@ export function getDbCats() {
 }
 
 export function postNewCat(data) {
+  console.log("apiClient", data)
   return request.post('/PostNewCat')
     .send(data)
     .catch(e => { console.log(e) })

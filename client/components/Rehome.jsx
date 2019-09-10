@@ -32,7 +32,7 @@ class Rehome extends Component {
             breed: this.state.breed,
             age: this.state.age
         }
-        // console.log(data)
+        console.log(data)
     }
 
     render() {

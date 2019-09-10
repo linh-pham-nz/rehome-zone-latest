@@ -14,8 +14,8 @@ function getCats() {
 function postCatData(data) {
   return db('cats')
     .insert({
-      name: data.catName, 
-      breed: data.catBreed,
-      age: data.catAge
+      name: data.name, 
+      breed: data.breed,
+      age: data.age
     })
 }
