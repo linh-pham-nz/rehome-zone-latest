@@ -29,7 +29,7 @@ class Adopt extends React.Component {
                             return (
                                 <div className="col-xl-4 col-sm-6" key={i}>
                                     <div className="card card-dimensions zoom mb-4 shadow">
-                                        <img className="card-img-top card-img-top-dimensions" src={`/images/cats/${cat.name}.jpg`}></img>
+                                        <img className="card-img-top card-img-top-dimensions" src={`/images/cats/${cat.name}.jpg)`}></img>
                                         <div className="card-body">
                                             <p className="card-body-name">{cat.name}</p>
                                             <p className="card-body-details">{cat.breed}</p>

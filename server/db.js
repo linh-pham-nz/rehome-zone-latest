@@ -16,6 +16,8 @@ function postCatData(data) {
     .insert({
       name: data.name, 
       breed: data.breed,
-      age: data.age
+      gender: data.gender,
+      age: data.age,
+      about: data.about
     })
 }

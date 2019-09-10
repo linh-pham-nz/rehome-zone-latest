@@ -10,13 +10,15 @@ class Rehome extends Component {
         this.state = {
             name: '',
             breed: '',
-            age: 0
+            gender: '',
+            age: 0,
+            about: ''
         }
     }   
 
 
     handleChange = (e) => {
-        // console.log("event", name, value)
+        // console.log("event", event.target.name, event.target.value)
         this.setState({ 
             [event.target.name]: event.target.value
         })
@@ -27,7 +29,9 @@ class Rehome extends Component {
         const data = {
             name: this.state.name,
             breed: this.state.breed,
-            age: this.state.age
+            gender: this.state.gender,
+            age: this.state.age,
+            about: this.state.about
         }
         postNewCat(data)
         // console.log(data)
@@ -62,11 +66,31 @@ class Rehome extends Component {
                                 </label>
                             </div>
                             <div>
+                                <label>Cat gender:
+                                <input 
+                                    type="text" 
+                                    name="gender" 
+                                    value={this.state.gender}
+                                    onChange={this.handleChange}
+                                    />
+                                </label>
+                            </div>
+                            <div>
                                 <label>Cat age:
                                 <input 
                                     type="number" 
                                     name="age" 
                                     value={this.state.age}
+                                    onChange={this.handleChange}
+                                    />
+                                </label>
+                            </div>
+                            <div>
+                                <label>About:
+                                <input 
+                                    type="text" 
+                                    name="about" 
+                                    value={this.state.about}
                                     onChange={this.handleChange}
                                     />
                                 </label>
