@@ -42,11 +42,11 @@ class Rehome extends Component {
         return (
             <React.Fragment>
                 <div className="container">
-                    <h2>Rehome a cat!</h2>
+                    <h1 className="component-heading">REHOME A CAT</h1>
                     <div>
-                        <form onSubmit={this.handleSubmit}>
+                        <form onSubmit={this.handleSubmit} className="form">
                             <div >
-                                <label>Cat name: 
+                                <label>Name: 
                                     <input 
                                         type="text" 
                                         name="name" 
@@ -56,7 +56,7 @@ class Rehome extends Component {
                                 </label>
                             </div>
                             <div>
-                                <label>Cat breed:
+                                <label>Breed:
                                 <input 
                                     type="text" 
                                     name="breed" 
@@ -66,7 +66,7 @@ class Rehome extends Component {
                                 </label>
                             </div>
                             <div>
-                                <label>Cat gender:
+                                <label>Gender:
                                 <input 
                                     type="text" 
                                     name="gender" 
@@ -76,7 +76,7 @@ class Rehome extends Component {
                                 </label>
                             </div>
                             <div>
-                                <label>Cat age:
+                                <label>Age:
                                 <input 
                                     type="number" 
                                     name="age" 

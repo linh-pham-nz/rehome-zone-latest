@@ -2,7 +2,7 @@ body {
     color: blue;
 }
 
-.adopt-heading {
+.component-heading {
     text-align: center;
     font-size: 4rem;
     color: rgb(18, 10, 92);
@@ -24,4 +24,17 @@ body {
     text-align: center;
     font-size: 1rem;
     color: rgb(18, 10, 92);
+}
+
+.form {
+    border-style: double;
+    border-width: 5px;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.25rem
+}
+
+input {
+    padding-left: 10px;
+    margin-left: 10px
 }
