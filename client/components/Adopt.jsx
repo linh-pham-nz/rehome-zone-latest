@@ -23,6 +23,7 @@ class Adopt extends React.Component {
         return (
             <React.Fragment>
                 <div className="container">
+                    <h1 className="adopt-heading">ADOPT A CAT</h1>
                     <div className="row">
                         {this.state.cats.map((cat, i) => {
                             return (
@@ -30,9 +31,9 @@ class Adopt extends React.Component {
                                     <div className="card card-dimensions zoom mb-4 shadow">
                                         <img className="card-img-top card-img-top-dimensions" src={`/images/cats/${cat.name}.jpg`}></img>
                                         <div className="card-body">
-                                            <p>{cat.name}</p>
-                                            <p>{cat.breed}</p>
-                                            <p>{cat.age}</p>
+                                            <p className="card-body-name">{cat.name}</p>
+                                            <p className="card-body-details">{cat.breed}</p>
+                                            <p className="card-body-details">{cat.age} years old</p>
                                         </div>
                                     </div>
                                 </div>
