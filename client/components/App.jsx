@@ -5,6 +5,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom'
 import RehomeZone from './RehomeZone'
 import Adopt from './Adopt'
 import Rehome from './Rehome'
+import Name from './Name'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       
       <Route exact={true} path='/' component={RehomeZone} />
       <Route path="/Adopt" component={Adopt} />
+      <Route path="/Name/:cat" component={Name} />
       <Route path="/Rehome" component={Rehome} />
     </Router>
   )

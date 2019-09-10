@@ -5,12 +5,12 @@ import Adopt from './Adopt'
 import { getDbCats } from '../apiClient'
 
 const Name = (props) => {
-    // console.log(props)
-    // let { name } = props.match.params.path
-    // console.log(name)
+    console.log(props)
+    let { cat } = props.match.params
+    console.log(cat)
     
     return (
-        <h1>This is an individual {name} page</h1>
+        <h1>This is an individual {cat} page</h1>
     )
     
 }
