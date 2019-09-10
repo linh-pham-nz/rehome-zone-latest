@@ -12,9 +12,6 @@ class Rehome extends Component {
             breed: '',
             age: 0
         }
-        
-        // this.handleChange = this.handleChange.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
     }   
 
 
@@ -33,7 +30,7 @@ class Rehome extends Component {
             age: this.state.age
         }
         postNewCat(data)
-        console.log(data)
+        // console.log(data)
     }
 
     render() {
