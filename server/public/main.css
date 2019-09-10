@@ -2,11 +2,26 @@ body {
     color: blue;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(185, 219, 184);
+}
+
+a:visited {
+    color: rgb(185, 219, 184)
+}
+
 .component-heading {
     text-align: center;
     font-size: 4rem;
     color: rgb(18, 10, 92);
     font-weight: bold
+}
+
+.main-text {
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(18, 10, 92);
 }
 
 .card {

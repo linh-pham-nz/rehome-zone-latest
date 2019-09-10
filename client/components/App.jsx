@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Router>
       <div className="navBar container-fluid">
-        <nav className="navbar navbar-expand-lg navbar-light bg-dark navbar-fixed-top">
+        <nav className="navbar bg-dark navbar-fixed-top">
           <div className="container">
             <h1><Link to='/'>Rehome Zone</Link></h1>
             <h3><Link to='/adopt'>Adopt a cat</Link></h3>

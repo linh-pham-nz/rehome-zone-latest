@@ -1,5 +1,7 @@
 import React from 'react'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
 
+import Name from './Name'
 import { getDbCats } from '../apiClient'
 
 class Adopt extends React.Component {
@@ -21,7 +23,7 @@ class Adopt extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
+            <Router>
                 <div className="container">
                     <h1 className="component-heading">ADOPT A CAT</h1>
                     <div className="row">
@@ -29,7 +31,12 @@ class Adopt extends React.Component {
                             return (
                                 <div className="col-xl-4 col-sm-6" key={i}>
                                     <div className="card card-dimensions zoom mb-4 shadow">
-                                        <img className="card-img-top card-img-top-dimensions" src={`/images/cats/${cat.name}.jpg`}></img>
+                                        <Link to={`/${cat.name}`}>
+                                            <img 
+                                                className="card-img-top card-img-top-dimensions" 
+                                                src={`/images/cats/${cat.name}.jpg`}>
+                                            </img>
+                                        </Link>
                                         <div className="card-body">
                                             <p className="card-body-name">{cat.name}</p>
                                             <p className="card-body-details">{cat.breed}</p>
@@ -41,7 +48,9 @@ class Adopt extends React.Component {
                         })}
                     </div>
                 </div>
-            </React.Fragment>
+                
+                <Route path="/Name" component={Name} />
+            </Router>
         )
     }
 }
