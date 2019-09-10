@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
 
 import RehomeZone from './RehomeZone'
 import Adopt from './Adopt'
@@ -18,8 +18,8 @@ const App = () => {
           </div>
         </nav>
       </div>
-      <Rehome />
-      <Route path='/' component={RehomeZone} />
+      
+      <Route exact={true} path='/' component={RehomeZone} />
       <Route path="/Adopt" component={Adopt} />
       <Route path="/Rehome" component={Rehome} />
     </Router>

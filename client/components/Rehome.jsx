@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import postNewCat from '../apiClient'
+import { postNewCat } from '../apiClient'
 
 // import { restElement } from '@babel/types'
 
@@ -32,6 +32,7 @@ class Rehome extends Component {
             breed: this.state.breed,
             age: this.state.age
         }
+        postNewCat(data)
         console.log(data)
     }
 
