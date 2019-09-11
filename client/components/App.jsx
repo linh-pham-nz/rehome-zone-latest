@@ -11,7 +11,7 @@ const App = () => {
   return (
     <Router>
       <div className="navBar container-fluid">
-        <nav className="navbar bg-dark navbar-fixed-top">
+        <nav className="navbar bg-dark">
           <div className="container">
             <h1><Link to='/'><i className="fa fa-paw fa-2x"></i>REHOME ZONE</Link></h1>
             <ul className="nav navbar-nav">

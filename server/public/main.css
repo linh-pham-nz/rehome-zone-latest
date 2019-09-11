@@ -2,10 +2,6 @@ body {
     color: blue;
 }
 
-navbar {
-    position: fixed
-}
-
 a {
     text-decoration: none;
     color: rgb(185, 219, 184);
