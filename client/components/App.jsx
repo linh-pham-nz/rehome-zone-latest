@@ -22,7 +22,7 @@ const App = () => {
       
       <Route exact={true} path='/' component={RehomeZone} />
       <Route path="/Adopt" component={Adopt} />
-      <Route path="/Name/:cat" component={Name} />
+      <Route path="/Name/:id" component={Name} />
       <Route path="/Rehome" component={Rehome} />
     </Router>
   )
