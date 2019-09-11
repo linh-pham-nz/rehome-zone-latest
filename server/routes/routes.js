@@ -11,7 +11,7 @@ router.get('/api/v1/cats', (req, res) => {
 })
 
 router.get('/api/v1/cats/:id', (req, res) => {
-  console.log("routes", req.body)
+  // console.log("routes", req.body)
   db.getChosenDbCat(req.params.id).then (results => {
     res.json(results)
   })

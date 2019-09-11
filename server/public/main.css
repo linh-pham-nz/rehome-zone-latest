@@ -2,6 +2,10 @@ body {
     color: blue;
 }
 
+navbar {
+    position: fixed
+}
+
 a {
     text-decoration: none;
     color: rgb(185, 219, 184);
@@ -11,7 +15,16 @@ a:visited {
     color: rgb(185, 219, 184)
 }
 
+h1 {
+    font-size: 4rem
+}
+
+li {
+    font-size: 2.5rem
+}
+
 .component-heading {
+    margin: 15px;
     text-align: center;
     font-size: 4rem;
     color: rgb(18, 10, 92);
@@ -38,6 +51,16 @@ a:visited {
 .card-body-details {
     text-align: center;
     font-size: 1rem;
+    color: rgb(18, 10, 92);
+}
+
+.cat-data {
+    margin: 70px;
+}
+
+.card-body-individual {
+    text-align: center;
+    font-size: 1.5rem;
     color: rgb(18, 10, 92);
 }
 

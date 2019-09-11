@@ -13,9 +13,11 @@ const App = () => {
       <div className="navBar container-fluid">
         <nav className="navbar bg-dark navbar-fixed-top">
           <div className="container">
-            <h1><Link to='/'>Rehome Zone</Link></h1>
-            <h3><Link to='/adopt'>Adopt a cat</Link></h3>
-            <h3><Link to='/rehome'>Rehome a cat</Link></h3>
+            <h1><Link to='/'><i className="fa fa-paw fa-2x"></i>REHOME ZONE</Link></h1>
+            <ul className="nav navbar-nav">
+              <li><Link to='/adopt'><i className="fa fa-paw"></i>Adopt a cat</Link></li>
+              <li><Link to='/rehome'><i className="fa fa-paw"></i>Rehome a cat</Link></li>
+            </ul>
           </div>
         </nav>
       </div>

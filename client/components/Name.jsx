@@ -30,19 +30,23 @@ class Name extends React.Component {
     
     render() {
         return (
-            <div className="container">
+            <div className="container flex">
                 <h1 className="component-heading">PLEASE MEET: {this.state.cat.name}</h1>
-                <div className="col-xl-4 col-sm-6">
-                <img src={`/images/cats/${this.state.cat.name}.jpg`}></img>
-                <div className="card-body data">
-                    <p className="card-body-name">{this.state.cat.name}</p>
-                    <p className="card-body-details">{this.state.cat.breed}</p>
-                    <p className="card-body-details">{this.state.cat.age} years old</p>
-                    <p className="card-body-details">About: {this.state.cat.about}</p>
-
-                </div>
-                    
-                </div>
+                <div className="row">
+                    <div className="col-xl-6 col-sm-6">
+                        <div>
+                            <img src={`/images/cats/${this.state.cat.name}.jpg`}></img>
+                        </div>
+                    </div>
+                    <div className="col-xl-6 col-sm-6">
+                        <div className="card cat-data">
+                            <p className="card-body-name">{this.state.cat.name}</p>
+                            <p className="card-body-individual">{this.state.cat.breed}</p>
+                            <p className="card-body-individual">{this.state.cat.age} years old</p>
+                            <p className="card-body-individual">{this.state.cat.about}</p>
+                        </div>
+                    </div> 
+                </div>                   
             </div>
         )
     }
