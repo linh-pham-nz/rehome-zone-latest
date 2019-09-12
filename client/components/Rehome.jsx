@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { postNewCat } from '../apiClient'
 
-// import { restElement } from '@babel/types'
-
 class Rehome extends Component {
     constructor(props) {
         super(props)
