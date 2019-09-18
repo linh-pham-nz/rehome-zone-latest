@@ -72,3 +72,15 @@ input {
     padding-left: 10px;
     margin-left: 10px
 }
+
+.meow-button {
+    background-color: #343A40;
+    text-align: center;
+    text-decoration: none;
+    /* float: center; */
+    font-size: 3rem;
+    color: rgb(185, 219, 184);
+    padding: 15px;
+    width: 50%;
+    margin-top: 30px;
+}
