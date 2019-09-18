@@ -1,0 +1,47 @@
+*** Create getCatFact.js in reducers folder. Paste contents below (adapted from async-redux-stories/client/reducers/error-message.js***
+
+// import {SHOW_ERROR} from '../actions'
+
+function getCatFact (state = '', action) {
+  switch (action.type) {
+    case SHOW_CAT_FACT:
+      return state
+
+    default:
+      return state
+  }
+}
+
+export default getCatFact
+
+*** add to apiClient file. Adapted from async-redux-stories/server/reddit.js ****
+
+router.get('/cat-facts', (req, res) => {
+  request
+  .get('https://raw.githubusercontent.com/vadimdemedes/cat-facts/master/cat-facts.json')
+  .end((err, result) => {
+      if (err) {
+        res.status(500).send(err.message)
+      } else {
+        res.json(result.body)
+      }
+  })
+})
+
+*** create index.js file in actions folder. Adapted from async-redux-stories/client/actions/index.js ***
+
+export function fetchPosts (subreddit) {
+    return (dispatch) => {
+      dispatch(requestPosts())
+      console.log('starting API call')
+      return request
+        .get('/api/v1/cat-facts')
+        .then(res => {
+          console.log('receiving API call')
+          dispatch(receivePosts(res.body))
+        })
+        .catch(err => {
+          dispatch(showError(err.message))
+        })
+    }
+}
