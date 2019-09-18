@@ -13,3 +13,15 @@ export function postNewCat(data) {
     .send(data)
     .catch(e => { console.log(e) })
 }
+
+// change to function 
+// request.get('/cat-facts', (req, res) => {
+//   .get('https://raw.githubusercontent.com/vadimdemedes/cat-facts/master/cat-facts.json')
+//   .end((err, result) => {
+//       if (err) {
+//         res.status(500).send(err.message)
+//       } else {
+//         res.json(result.body)
+//       }
+//   })
+// })
