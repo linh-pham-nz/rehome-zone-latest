@@ -17,14 +17,16 @@ export function postNewCat(data) {
 export function getCatFacts() {
   console.log("api working")
   return request.get('https://raw.githubusercontent.com/vadimdemedes/cat-facts/master/cat-facts.json')
-    .end((err, result) => {
-        if (err) {
-          res.status(500).send(err.message)
-        } else {
-          res.json(result.body)
-          console.log(result.body)
-        }
-    })
-  
+    .catch(e => { console.log(e) })
+
 }
+
+
+// .end((err, result) => {
+//   if (err) {
+//     res.status(500).send(err.message)
+//   } else {
+//     res.json(result.body)
+//   }
+// })
 
