@@ -19,7 +19,7 @@ class CatFacts extends React.Component {
                     <h3 className="component-heading">CAT FACTS</h3>
                     <h3 className="main-text">Click on the button below for a random cat fact!</h3>
                     <button onClick={() => this.props.dispatch(fetchFact())}className="meow-button">Meow!!!</button>
-                    <h4>{this.props.state}</h4>
+                    <h4>{this.props.state.catFactReducer}</h4>
                 </div>
             </React.Fragment>
         )
