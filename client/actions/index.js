@@ -19,7 +19,7 @@ export const showError = (errorMessage) => {
 
 export function fetchFact () {
   return (dispatch) => {
-    getCatFacts()
+    return getCatFacts()
       .then(res => {
         let allFacts = JSON.parse(res.text)
         let randomFact = allFacts[Math.floor(Math.random() * allFacts.length)]
