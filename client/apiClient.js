@@ -13,3 +13,11 @@ export function postNewCat(data) {
     .send(data)
     .catch(e => { console.log(e) })
 }
+
+export function getCatFacts() {
+  return request.get('https://raw.githubusercontent.com/vadimdemedes/cat-facts/master/cat-facts.json')
+    .catch(e => { console.log(e) })
+
+}
+
+
