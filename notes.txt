@@ -31,3 +31,4 @@ https://github.com/roa-2019/knex-relationships-stories/blob/linh/tests/db.test.j
 
 https://github.com/roa-2019/knex-relationships-stories/blob/linh/tests/server.test.js
 
+https://github.com/roa-2019/client-side-rendering/blob/testing-client-api/server/tests/server.test.js
