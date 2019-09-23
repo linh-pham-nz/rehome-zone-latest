@@ -8,16 +8,16 @@ module.exports = {
   getChosenDbCat
 }
 
-function getCats() {
+function getCats(db=db) {
   return db('cats').select()
 }
 
-function getChosenDbCat(id) {
+function getChosenDbCat(id, db=db) {
   return db('cats')
     .where('id', id).first()
 }
 
-function postCatData(data) {
+function postCatData(data, db=db) {
   return db('cats')
     .insert({
       name: data.name, 
