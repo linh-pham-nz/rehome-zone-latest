@@ -12,11 +12,12 @@ test('test runner is working', () => {
   expect(true).toBeTruthy()
 })
 
-// test('<App> root has className of app', () => {
-//   const wrapper = shallow(<App />)
-//   const root = wrapper.find('.app')
-//   expect(root.length).toBe(1)
-// })
+test('<App> root has className of app', () => {
+  const wrapper = shallow(<App />)
+  // const root = wrapper.find('navBar')
+  // expect(root.length).toBe(1)
+  expect(wrapper.find('.navBar')).to.have.lengthOf(1)
+})
 
 test('page header includes REHOME ZONE', () => {
   const wrapper = render(<App />)
@@ -26,6 +27,8 @@ test('page header includes REHOME ZONE', () => {
 
 // test('renders an <li> for each fruit', () => {
 //   const wrapper = mount(<App />)
-//   wrapper.setState({fruits: ['orange', 'persimmons', 'kiwi fruit']})
+//   wrapper.setState({ name: 'bar' })
+//   // wrapper.setState({fruits: ['orange', 'persimmons', 'kiwi fruit']})
+//   // console.log(fruits)
 //   expect(wrapper.find('li').length).toBe(3)
 // })

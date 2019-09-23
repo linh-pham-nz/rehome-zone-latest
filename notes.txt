@@ -12,3 +12,15 @@ https://github.com/roa-2019/testing-redux-example/blob/jv/tests/client/component
 
 
 // test routes to db
+
+describe('GET /api/v1/cats', () => {
+  test('returns cats from db', () => {
+    return request(server)
+      .get('/api/v1/cats')
+      // .expect(200)
+      .then((res) => {
+        expect(res.body.length).toBe(4)
+      })
+      // .catch(err => expect(err).toBeNull())
+  })
+})
