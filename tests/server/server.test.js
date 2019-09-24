@@ -1,5 +1,5 @@
 /* global test beforeEach afterEach expect */
-const request = require('supertest')
+// const request = require('supertest')
 
 const server = require('../../server/server')
 const testEnv = require('./test-environment')

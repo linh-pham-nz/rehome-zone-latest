@@ -1,6 +1,6 @@
 const env = process.env.NODE_ENV || 'development'
 const config = require('../knexfile')[env]
-const db = require('knex')(config)
+const connection = require('knex')(config)
 
 module.exports = {
   getCats,
@@ -8,16 +8,16 @@ module.exports = {
   getChosenDbCat
 }
 
-function getCats(db=db) {
+function getCats(db=connection) {
   return db('cats').select()
 }
 
-function getChosenDbCat(id, db=db) {
+function getChosenDbCat(id, db=connection) {
   return db('cats')
     .where('id', id).first()
 }
 
-function postCatData(data, db=db) {
+function postCatData(data, db=connection) {
   return db('cats')
     .insert({
       name: data.name, 
