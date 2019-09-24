@@ -12,7 +12,7 @@ let testDb = testEnv.getTestDb()
 // In our tests, we can get at the database as `t.context.db`.
 beforeEach(() => {
   testDb = testEnv.getTestDb()
-  server.db = testDb // this makes ure express uses the testDb
+  server.db = testDb // this makes sure express uses the testDb
   return testEnv.initialise(testDb)
 })
 
@@ -25,16 +25,5 @@ test('db works', () => {
     //note that this is using the test/seeds folder
 })
 
-// describe('GET /api/v1/cats', () => {
-//   test('returns cats from db', () => {
-//     return request(server)
-//       .get('/api/v1/cats')
-//       .expect(200)
-//       .then((res) => {
-//         expect(res.body.length).toBe(3)
-//       })
-//       .catch(err => expect(err).toBeNull())
-//   })
-// })
 
 
