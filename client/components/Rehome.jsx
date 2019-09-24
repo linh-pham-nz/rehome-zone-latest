@@ -16,9 +16,9 @@ class Rehome extends Component {
 
 
     handleChange = (e) => {
-        // console.log("event", event.target.name, event.target.value)
+        let { name, value } = e.target
         this.setState({ 
-            [event.target.name]: event.target.value
+            [name]: value
         })
     }
 
@@ -47,6 +47,7 @@ class Rehome extends Component {
                                 <label>Name: 
                                     <input 
                                         type="text" 
+                                        id="name"
                                         name="name" 
                                         value={this.state.name}
                                         onChange={this.handleChange}
@@ -56,7 +57,8 @@ class Rehome extends Component {
                             <div>
                                 <label>Breed:
                                 <input 
-                                    type="text" 
+                                    type="text"
+                                    id="breed" 
                                     name="breed" 
                                     value={this.state.breed}
                                     onChange={this.handleChange}
@@ -67,6 +69,7 @@ class Rehome extends Component {
                                 <label>Gender:
                                 <input 
                                     type="text" 
+                                    id="gender"
                                     name="gender" 
                                     value={this.state.gender}
                                     onChange={this.handleChange}
@@ -77,6 +80,7 @@ class Rehome extends Component {
                                 <label>Age:
                                 <input 
                                     type="number" 
+                                    id="age"
                                     name="age" 
                                     value={this.state.age}
                                     onChange={this.handleChange}
@@ -87,6 +91,7 @@ class Rehome extends Component {
                                 <label>About:
                                 <input 
                                     type="text" 
+                                    id="about"
                                     name="about" 
                                     value={this.state.about}
                                     onChange={this.handleChange}
