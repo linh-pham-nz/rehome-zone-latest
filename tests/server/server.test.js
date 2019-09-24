@@ -38,8 +38,3 @@ test('db works', () => {
 // })
 
 
-
-// test route getCatByName
-
-// test route postNewCat
-
