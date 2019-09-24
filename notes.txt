@@ -1,38 +1,3 @@
-  
-export default catFactReducer
-
-*** add to apiClient file. Adapted from async-redux-stories/server/reddit.js ****
-
-router.get('/cat-facts', (req, res) => {
-  request
-  .get('https://raw.githubusercontent.com/vadimdemedes/cat-facts/master/cat-facts.json')
-  .end((err, result) => {
-      if (err) {
-        res.status(500).send(err.message)
-      } else {
-        res.json(result.body)
-      }
-  })
-})
-
-*** create index.js file in actions folder. Adapted from async-redux-stories/client/actions/index.js ***
-
-export function fetchPosts (subreddit) {
-    return (dispatch) => {
-      dispatch(requestPosts())
-      console.log('starting API call')
-      return request
-        .get('/api/v1/cat-facts')
-        .then(res => {
-          console.log('receiving API call')
-          dispatch(receivePosts(res.body))
-        })
-        .catch(err => {
-          dispatch(showError(err.message))
-        })
-    }
-}
-
 *** TESTING ****
 
 // test actions are working // test routes to api?
@@ -47,3 +12,23 @@ https://github.com/roa-2019/testing-redux-example/blob/jv/tests/client/component
 
 
 // test routes to db
+
+describe('GET /api/v1/cats', () => {
+  test('returns cats from db', () => {
+    return request(server)
+      .get('/api/v1/cats')
+      // .expect(200)
+      .then((res) => {
+        expect(res.body.length).toBe(4)
+      })
+      // .catch(err => expect(err).toBeNull())
+  })
+})
+
+// test examples
+
+https://github.com/roa-2019/knex-relationships-stories/blob/linh/tests/db.test.js
+
+https://github.com/roa-2019/knex-relationships-stories/blob/linh/tests/server.test.js
+
+https://github.com/roa-2019/client-side-rendering/blob/testing-client-api/server/tests/server.test.js
