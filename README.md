@@ -31,3 +31,4 @@ This repo includes/uses:
 * Knex
 * SQLite3
 
+This project is currently a WIP and changes will be continuously added.
