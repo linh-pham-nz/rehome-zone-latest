@@ -1,22 +1,32 @@
-# Fullstack boilerplate
+# Rehome Zone
+
+This is a personal project started during my time at Enspiral Dev Academy. It is a cat adoption website for 2 types of users: those who want to view cats available and those who want to rehome their cat(s). It features:
+
+* A home page
+* An external API (to retrieve cat facts)
+* A database of current cats for adoption
+* A form for rehoming cats
+
 
 To get started:
 
 ```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
+git clone 
 npm install # to install dependencies
+npx knex migrate:latest # to migrate latest tables
+npx knex seed:run # to seed the database
 npm run dev # to start the dev server
 ```
 
 You can find the server running on [http://localhost:3000](http://localhost:3000).
 
-This repo includes:
+This repo includes/uses:
 
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* a fake database module (`db.js`)
-* an API client module (`apiClient.js`)
-* configuration for Jest and Enzyme (including JSDOM)
-* configuration for server-side debugging in VS Code
-* a single client-side test (`/tests/client/App.test.js`)
+* HTML
+* CSS (with Bootstrap)
+* JavaScript
+* React
+* Redux
+* Knex
+* SQLite3
+
