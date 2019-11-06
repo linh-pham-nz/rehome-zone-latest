@@ -11,7 +11,8 @@ This is a personal project started during my time at Enspiral Dev Academy. It is
 To get started:
 
 ```
-git clone 
+git clone https://github.com/linh-pham-nz/rehome-zone-latest
+cd rehome-zone-latest
 npm install # to install dependencies
 npx knex migrate:latest # to migrate latest tables
 npx knex seed:run # to seed the database
